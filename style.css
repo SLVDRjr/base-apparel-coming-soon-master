@@ -1,0 +1,199 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.main__container {
+  display: grid;
+  gap: 1rem;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+
+  padding-top: 2rem;
+}
+
+.logo {
+  padding-inline: 2rem;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+
+  padding: 2rem;
+  text-align: center;
+  order: 2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+
+p {
+  color: hsl(0, 36%, 70%);
+  line-height: 1.5;
+}
+
+form {
+  position: relative;
+
+  margin-top: 1rem;
+}
+
+.form__control {
+  position: relative;
+}
+
+.form__control .error__icon {
+  position: absolute;
+  top: 0.875rem;
+  right: 5.25rem;
+}
+
+.form__control.error input {
+  border-color: hsl(0, 93%, 68%);
+}
+
+.form__control.error .error__icon {
+  visibility: visible;
+}
+
+.form__control small {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 1.5rem;
+
+  color: hsl(0, 93%, 68%);
+  visibility: hidden;
+}
+
+.form__control.error small {
+  visibility: visible;
+}
+
+input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid hsl(0, 36%, 70%);
+  color:hsl(0, 36%, 70%);
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color:hsl(0, 36%, 70%);
+}
+
+.error__icon {
+  visibility: hidden;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 0.9325rem 1.75rem;
+  border: 0;
+  border-radius: 1.75rem;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  cursor: pointer;
+}
+
+button:hover, button:active {
+  opacity: 0.8;
+}
+
+picture img {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 100vh;
+    gap: 0;
+  }
+
+  .main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  main {
+    text-align: start;
+    padding-block: 0;
+  }
+
+  main p, form {
+    max-width: 450px;
+  }
+
+  .form__control .error__icon {
+    right: 6.75rem;
+  }
+
+  .hero__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('images/hero-desktop.jpg');
+    background-size: cover;
+    width: 40%;
+    height: 100vh;
+  }
+
+  picture {
+    display: none;
+  }
+
+  button {
+    padding: 0.9325rem 2.5rem;
+  }
+}
+
+
+
+
+
